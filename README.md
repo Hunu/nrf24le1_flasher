@@ -89,9 +89,10 @@ The only dependency is libftdi1 and libusb-1.0.
 To install these two package, run:
 
 ```bash
-sudo apt install libftdi1
-sudo apt install libusb-1.0
-sudo apt install libftdi-dev
+sudo apt-get install libftdi-dev
+sudo apt-get install libftdi1
+sudo apt-get install libusb-1.0.0-dev
+sudo apt-get install libusb-1.0
 ```
 
 Usage

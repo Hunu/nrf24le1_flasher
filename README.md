@@ -1,6 +1,24 @@
 nRF24LE1 Flasher
 ================
 
+## Issue
+
+Not working right now.
+
+After running "Make", those message shows up.
+
+```
+make: pkg-config: Command not found
+gcc  -g -Wall  -c src/spi_ft232r.c -o src/spi_ft232r.o
+src/spi_ft232r.c:7:10: fatal error: libusb.h: No such file or directory
+    7 | #include <libusb.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+make: *** [Makefile:29: src/spi_ft232r.o] Error 1
+```
+
+## Info
+
 This software is used to read, write or erase flash memory of Nordic nRF24LE1
 chips. Product information can be found at [Nordic site][1].
 If you are looking for a free SDK to programming that chip, you can find a good
@@ -64,8 +82,17 @@ we have serial already.
 Dependencies
 ------------
 
+The testing environment is PopOs19.04
+
 The only dependency is libftdi1 and libusb-1.0.
 
+To install these two package, run:
+
+```bash
+sudo apt install libftdi1
+sudo apt install libusb-1.0
+sudo apt install libftdi-dev
+```
 
 Usage
 -----
